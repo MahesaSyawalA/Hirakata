@@ -4,6 +4,7 @@
 * {
   margin: 0;
   font-family: "Inder", Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -270,6 +271,29 @@ aside .profile a {
   background-color: white;
   border-radius: 0 0 20px 20px;
 }
+
+#katakana{
+  display: none;
+}
+
+
+.arigato{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #a8e4eb;
+}
+
+.arigato h1{
+  color: white;
+  font-size:70px;
+}
+
+.arigato img{
+max-height:300px;
+}
+
+
 
 /* footer */
 footer{
