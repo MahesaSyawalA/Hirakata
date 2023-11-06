@@ -6,7 +6,7 @@ const katakanaButton = document.getElementById("katakanaButton");
 const hiragana = document.getElementById("hiragana");
 const katakana = document.getElementById("katakana");
 
-let selection = false;
+let selection = true;
 
 function handleScroll() {
   if (window.scrollY > content.offsetTop) {
@@ -32,11 +32,11 @@ function handleHiragana() {
     hiraganaButton.style.backgroundColor = "white";
     katakanaButton.style.color = "";
     katakanaButton.style.backgroundColor = "";
-    hiragana.style.display = "block";
+    hiragana.style.display = "flex";
     katakana.style.display = "none";
     console.log(selection);
   }else{
-    hiragana.style.display = "block";
+    hiragana.style.display = "flex";
     katakana.style.display = "none";
   }
 }
@@ -49,13 +49,16 @@ function handleKatakana() {
     hiraganaButton.style.color = "";
     hiraganaButton.style.backgroundColor = "";
     hiragana.style.display = "none";
-    katakana.style.display = "block";
+    katakana.style.display = "flex";
     console.log(selection);
   }else{
     hiragana.style.display = "none";
-    katakana.style.display = "block";
+    katakana.style.display = "flex";
   }
 }
+
+handleKatakana();
+handleHiragana();
 
 // hiragana.addEventListener("click", function(){
 //     if(selection == true){

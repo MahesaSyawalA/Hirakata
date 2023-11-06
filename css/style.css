@@ -272,9 +272,25 @@ aside .profile a {
   border-radius: 0 0 20px 20px;
 }
 
+.content  .card{
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap:20px ;
+}
+.content img{
+  align-self: center;
+  max-width: 80%;
+}
+
+.content img[src*="dahankuon1"]{
+  max-width: 40%;
+}
 #katakana{
   display: none;
 }
+
 
 
 .arigato{
