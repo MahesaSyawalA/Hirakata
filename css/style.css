@@ -39,9 +39,12 @@ body {
 }
 
 nav ul {
+  padding-inline: 4rem;
   display: flex;
-  gap: 30px;
-  font-size: 20px;
+  gap: 2rem;
+}
+
+nav ul li {
   list-style-type: none;
 }
 
@@ -59,6 +62,8 @@ nav a:hover {
 
 /* main content */
 main {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -66,6 +71,7 @@ main aside {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 0;
   height: 100%;
   padding: 0;
   margin: 0;
@@ -129,11 +135,14 @@ aside .profile a {
   gap: 80px;
   margin: 0;
   width: 100%;
-  height: 100vh;
+  height: fit-content;
   max-height: 900px;
+  padding: 100px 20px 100px 20px;
+  box-sizing: border-box;
   background-image: url("../assets/img/hero.svg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: top;
 }
 
 .hero-description {
@@ -153,8 +162,10 @@ aside .profile a {
   font-size: 18px;
 }
 
-.hero-image img {
-  min-width: 100px;
+.hero img {
+  width: 50%;
+  max-width: 500px;
+  min-width: 300px;
 }
 /* end hero */
 /* introduction */
@@ -163,9 +174,14 @@ aside .profile a {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 50vh;
-  max-height: 400px;
+  height: fit-content;
+  /* max-height:400px ; */
   background: linear-gradient(to bottom, #46c5d3, white);
+}
+
+.introduction img {
+  max-width: 300px;
+  max-height: 400px;
 }
 
 .introduction2 {
@@ -173,9 +189,13 @@ aside .profile a {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 50vh;
-  max-height: 400px;
+  height: fit-content;
   background: white;
+}
+
+.introduction2 img {
+  max-width: 300px;
+  max-height: 400px;
 }
 
 .introduction-card {
@@ -251,7 +271,7 @@ aside .profile a {
 
 /* end connector */
 
-.content {
+.alphabet {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -272,51 +292,48 @@ aside .profile a {
   border-radius: 0 0 20px 20px;
 }
 
-.content  .card{
+.alphabet .card {
   padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap:20px ;
+  gap: 20px;
+  text-align:justify;
 }
-.content img{
+.alphabet img {
   align-self: center;
   max-width: 80%;
 }
 
-.content img[src*="dahankuon1"]{
+.alphabet img[src*="dahankuon1"] {
   max-width: 40%;
 }
-#katakana{
+#katakana {
   display: none;
 }
 
-
-
-.arigato{
+.arigato {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #a8e4eb;
 }
 
-.arigato h1{
+.arigato h1 {
   color: white;
-  font-size:70px;
+  font-size: 70px;
 }
 
-.arigato img{
-max-height:300px;
+.arigato img {
+  max-height: 300px;
 }
-
-
 
 /* footer */
-footer{
-  display: flex ;
+footer {
+  display: flex;
   justify-content: space-between;
   padding: 40px;
-  background-color:#233A4C ;
+  background-color: #233a4c;
 }
 
 footer div {
@@ -326,14 +343,14 @@ footer div {
   gap: 40px;
 }
 
-footer .card-list{
+footer .card-list {
   flex-grow: 2;
   display: flex;
   flex-direction: row;
   gap: 40px;
 }
 
-footer div h2{
+footer div h2 {
   text-align: start;
   color: white;
   font-size: xx-large;
@@ -344,22 +361,84 @@ footer img {
 }
 
 footer ul {
-  font-size:large;
+  font-size: large;
   color: white;
   display: flex;
-  gap:10px;
+  gap: 10px;
   flex-direction: column;
   list-style-type: none;
 }
 
 footer ul li a {
-  font-size:medium;
+  font-size: medium;
   text-decoration: none;
   color: white;
 }
 
-footer ul li a:hover{
+footer ul li a:hover {
   color: #46c5d3;
 }
 
+@media screen and (max-width: 1200px) {
+}
+@media screen and (max-width: 768px) {
+  /* navbar */
+  #navbar-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* hero */
+  .hero {
+    /* height: 500px; */
+    flex-direction: column-reverse;
+    gap: 5px;
+  background: #46C5D3;
+  }
+  
+  .hero-description {
+    justify-content: center;
+  }
+  
+  .hero-description h1 {
+    padding:0 30px 0 30px;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .hero-description p {
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  /* introduction */
+  .introduction {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .introduction2 {
+    padding-top: 20px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  /* content */
+  .alphabet .card {
+    padding: 20px;
+  }
+  
+  .arigato{
+    flex-wrap: wrap;
+  }
+  
+  .arigato h1 {
+    text-align: center;
+    width: 100%;
+    order:-1;
+  }
+}
 
+@media screen and (max-width: 1000px) {
+}
