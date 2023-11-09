@@ -39,6 +39,7 @@ body {
 }
 
 nav ul {
+  font-size: large;
   padding-inline: 4rem;
   display: flex;
   gap: 2rem;
@@ -177,6 +178,7 @@ aside .profile a {
   width: 100%;
   height: fit-content;
   /* max-height:400px ; */
+  padding: 0 20px ;
   background: linear-gradient(to bottom, #46c5d3, white);
 }
 
@@ -192,6 +194,8 @@ aside .profile a {
   width: 100%;
   height: fit-content;
   background: white;
+  padding: 0 20px ;
+
 }
 
 .introduction2 img {
@@ -384,8 +388,30 @@ footer ul li a:hover {
   color: #46c5d3;
 }
 
+
 @media screen and (max-width: 1200px) {
+
+  /* introduction */
+  .introduction{
+    padding: 20px 20px;
+    text-align: justify;
+  }
+  .introduction2{
+    padding: 20px 20px;
+    text-align: justify;
+
+  }
+
 }
+
+@media screen and (max-width: 1000px) {
+
+  .arigato h1 {
+    text-align: initial;
+    padding:0 80px 0 80px ;
+  }
+}
+
 @media screen and (max-width: 768px) {
   *{
   overflow-x: hidden;
@@ -443,6 +469,7 @@ footer ul li a:hover {
   }
   
   .arigato h1 {
+    padding: 0;
     text-align: center;
     width: 100%;
     order:-1;
@@ -452,7 +479,6 @@ footer ul li a:hover {
   main aside{
     background-color:#a8e4eb ;
     height: 300px;
-    border: 1px solid;
     position: static;
     height: fit-content;
   }
@@ -461,7 +487,6 @@ footer ul li a:hover {
   }
   
   aside .biodata {
-    border: 1px solid ;
     height: fit-content;
     width: 100%;
     display: flex;
@@ -478,10 +503,12 @@ footer ul li a:hover {
   }
   
   footer{
+    align-items: center;
     flex-direction: column-reverse;
   }
 
   footer .card-list{
+
     gap: 10px;
   }
   footer ul {
@@ -493,5 +520,3 @@ footer ul li a:hover {
   }
 }
 
-@media screen and (max-width: 1000px) {
-}
