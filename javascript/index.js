@@ -34,8 +34,11 @@ function handleHiragana() {
     katakanaButton.style.backgroundColor = "";
     hiragana.style.display = "flex";
     katakana.style.display = "none";
-    console.log(selection);
   }else{
+    hiraganaButton.style.color = "#46C5D3";
+    hiraganaButton.style.backgroundColor = "white";
+    katakanaButton.style.color = "";
+    katakanaButton.style.backgroundColor = "";
     hiragana.style.display = "flex";
     katakana.style.display = "none";
   }
@@ -50,26 +53,14 @@ function handleKatakana() {
     hiraganaButton.style.backgroundColor = "";
     hiragana.style.display = "none";
     katakana.style.display = "flex";
-    console.log(selection);
   }else{
+    katakanaButton.style.color = "#46C5D3";
+    katakanaButton.style.backgroundColor = "white";
+    hiraganaButton.style.color = "";
+    hiraganaButton.style.backgroundColor = "";
     hiragana.style.display = "none";
     katakana.style.display = "flex";
   }
 }
 
-handleKatakana();
 handleHiragana();
-
-// hiragana.addEventListener("click", function(){
-//     if(selection == true){
-//         console.log(selection);
-//         handleButton()
-//     }
-// } );
-
-// katakana.addEventListener("click", function(){
-//     if(selection == false){
-//         console.log(selection);
-//         handleButton()
-//     }
-// } );
